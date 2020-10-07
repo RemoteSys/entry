@@ -106,18 +106,12 @@ About [yaml](https://en.wikipedia.org/wiki/YAML) file.
 ## 4. First virtual environment
 
 1. Run terminal
-2. Create new environment: `conda create -n lab2`
-3. Activate environment: `conda activate lab2`
+2. Create new environment: `conda create -n lab1`
+3. Activate environment: `conda activate lab1`
 3. Install pakages:
 
-  >- `numpy`: for operations on an array of numbers
-  >- `scipy`: image processing functions
-  >- `pillow` (PIL): opening image files, image processing functions
-    `conda install -c anaconda numpy scipy pillow` 
-  >- `matplotlib`: displaying images on the screen
-    `conda install -c conda-forge matplotlib`
-  >- `ipykernel`: jupyter's packages
-    `conda install -c anaconda ipykernel`
+  >- `ipyton`: Python interpreter console
+    `conda install -c anaconda ipython`
 
 
 
