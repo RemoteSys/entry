@@ -28,7 +28,7 @@ def parserFunction():
     # Add arguments to your module: mandatory, i.e. positional and optional i.e.
     parser.add_argument('rows',     type=int,    help=u'''Number of rows''')
     parser.add_argument('cols',     type=int,    help=u'''Number of cols''')
-    parser.add_argument('-p','--path',     type=str,    help=u'''Path to folder''')
+    parser.add_argument('-p','--somePath',     type=str,    help=u'''Path to folder''')
 
 
     args = parser.parse_args()
@@ -37,7 +37,8 @@ def parserFunction():
 
 
 def main(args):
-    args.fullPath = Path(args.path).resolve().as_posix()
+    if args.somePath:
+        args.fullPath = Path(args.somePath).resolve().as_posix()
     
     print(f'Dictionary of command line arguments:')
     for key,val in vars(args).items():
