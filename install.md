@@ -133,3 +133,25 @@ Jupyter Notebook:
 
 
 ---
+# IV. Miscellaneous
+
+## 1. Dark theme for Jupyter Notebook
+> Details see [GitHub](https://github.com/dunovank/jupyter-themes)  project  
+>and [Anaconda Cloud](https://anaconda.org/conda-forge/jupyterthemes) how to install
+
+1. Run terminal (`base` environment)
+2. Install: `conda install -c conda-forge jupyterthemes`
+3. Use: 
+
+    - `jt -l` - list themes   
+    - `jt -t theme_name` - select theme
+    - `jupyter notebook` - run jupyter
+    - `jt -r` - restore default theme
+
+4. Requirements: the `Stylish` browser extension (available for Chrome, Firefox).
+
+
+
+
+
+
