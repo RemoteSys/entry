@@ -1,7 +1,7 @@
 # Preparing the computer for the laboratory
 ---
 
-1. Install Anaconda distribution - see section [Installing](#installing).
+1. Install Anaconda distribution - see section [Installing](#install).
 2. Install text editor with Python syntax support - for Windows, e.g. [notepad++](https://notepad-plus-plus.org/).
 3. Optional: install editor with *markdown* support:
     - plugin to the *notepad++* editor 
@@ -23,7 +23,7 @@
 
 
 
-## Installing
+## Installing {#install}
 
 1. Download the chosen installation [package](https://www.anaconda.com/products/individual):
 
@@ -149,8 +149,6 @@ Jupyter Notebook:
     - `jt -r` - restore default theme
 
 4. Requirements: the `Stylish` browser extension (available for Chrome, Firefox).
-
-
 
 
 
