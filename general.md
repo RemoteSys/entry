@@ -1,4 +1,4 @@
-# 1. Shortcuts
+# 1. Programming tools 
 
 Tools will be used for exercises:
 
@@ -15,7 +15,7 @@ Start `ipython`:
   > in the system terminal (Linux) or in the Anaconda Prompt (Windows) write `ipython`.
  ![Lunch ipython](./img/ipython.png)
 
-### Keyboard shortcuts:
+### 2.1. Keyboard shortcuts:
 
   - `TAB` - completes and suggests syntax  
   - `name_object + ?` e.g. `myFunction?` display description (doc string) if available
@@ -27,9 +27,27 @@ Start `ipython`:
   - `ctrl + c` - interrupts the current action
   - `ctrl + u` - deletes the entire text line
 
+
+### 2.2. Saving (logging) a session
+
+All work done in ipython can be saved to a text file using one of the magic functions:
+
+>- %logstart
+>- %history / %hist
+>- %save
+
+Example with `% hist`:
+
+> `%hist -n -o -f path_to_my_history_file.txt`
+
+
+### 2.3. Tutorial
 > IPython documentation: [Tutorial](https://ipython.readthedocs.io/en/stable/interactive/index.html)
 
 
+---
+
+---
 
 # 3. `Jupyter notebook`
 
@@ -47,6 +65,10 @@ Start `Jupyter notebook`:
   - `y` - changes the cell type to `Code`
   
 
+
+---
+
+---
 
 
 # 4. Using `Python` modules
