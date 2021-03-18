@@ -1,3 +1,8 @@
+<style>
+r { color: red }
+</style>
+
+
 # Preparing the computer for the laboratory
 ---
 
@@ -105,15 +110,25 @@ About [yaml](https://en.wikipedia.org/wiki/YAML) file.
 
 ## 4. First virtual environment
 
-1. Run terminal
+1. Run terminal (`Anaconda prompt`)
 2. Create new environment: `conda create -n lab1`
 3. Activate environment: `conda activate lab1`
 3. Install pakages:
 
-  >- `ipyton`: Python interpreter console
+  >- **ipython**: to work with *ipython* terminal
     `conda install -c anaconda ipython`
 
+ >- **ipython and ipykernel** - to work with *jupyter notebook*
+    `conda install -c anaconda ipython  ipykernel` 
 
+
+
+## <r>Technical note:</r>
+
+ - Date: 2021.03.15
+ - Topic: Problems have been found with ipython 7.18 / 7.19 and jedi. These packages should be installed in versions:
+    - <r>ipython=7.21</r>
+    - <r>jedi=0.17.2 </r>
 
 
 ---
