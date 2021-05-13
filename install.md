@@ -45,7 +45,7 @@ Directory and file names should:
  >- start with letters, not numbers 
 ---
 
-# I. Anaconda 
+# II. Anaconda 
 
 
 1. What is Anaconda?  
