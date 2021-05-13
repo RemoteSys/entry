@@ -13,6 +13,38 @@ r { color: red }
     - [Mark Text](https://github.com/marktext/marktext)
 
 ---
+
+# I. General remarks
+
+### Paths to directories / files
+In Windows, the addresses (paths) of files / folders can be entered in various ways:
+ >- c: \ someFolder - with a single `\` character
+ >- c: \\ someFolder - using the double `\ \`
+ >- c: / someFolder - with a single character `/`
+
+Check which method works for your computer.
+
+
+### Folder location
+
+Folders with software, data, scripts etc. should be located directly on the comupter's disk - examples for the Windows system:
+ >- `c:\Anaconda` - Anaconda installation folder
+ >- `c:\someName` - working directory where data, scripts, etc. will be placed, e.g. `c:\myPython`
+
+A directory  structure should be created in the working directory, e.g .:
+ >- c:\myPython\data
+ >- c:\myPython\images
+ >- c:\myPython\notebooks
+
+### File and directory names
+
+Directory and file names should:
+ >- be as short as possible
+ >- do not contain special characters, e.g. `*,.,?, $` or 'empty' characters such as `spaces` or `tabs`
+ >- do not contain diacritical signs such as `ę, ó,...` and the like
+ >- start with letters, not numbers 
+---
+
 # I. Anaconda 
 
 
@@ -58,7 +90,7 @@ In order to be able to operate virtual environments and collaborate with the *co
   >-  (base) environment run: `conda install -c conda-forge jupyter_contrib_nbextensions`
 
 ---
-# II. Conda environments and packages management
+# III. Conda environments and packages management
 
 ## 1 . Management of environments
 
@@ -132,7 +164,7 @@ About [yaml](https://en.wikipedia.org/wiki/YAML) file.
 
 
 ---
-# III. Tools
+# IV. Tools
 
 Ipython:
    >In simple terms, it is a modern, interactive Python interpreter console. In fact, Ipython is something much bigger - [here](https://ipython.org/ipython-doc/stable/overview.html) you can read about it.  
@@ -148,7 +180,7 @@ Jupyter Notebook:
 
 
 ---
-# IV. Miscellaneous
+# V. Miscellaneous
 
 ## 1. Dark theme for Jupyter Notebook
 > Details see [GitHub](https://github.com/dunovank/jupyter-themes)  project  
