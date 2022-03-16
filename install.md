@@ -7,10 +7,10 @@ r { color: red }
 ---
 
 1. Install Anaconda distribution - see section [Installing](#installing).
-2. Install text editor with Python syntax support - for Windows, e.g. [notepad++](https://notepad-plus-plus.org/).
-3. Optional: install editor with *markdown* support:
-    - plugin to the *notepad++* editor 
-    - [Mark Text](https://github.com/marktext/marktext)
+2. Install text editor (python syntax support function is helpful). Sample open source editors:
+- [notepad++](https://notepad-plus-plus.org/).
+- [atom](https://atom.io/).
+- [spyder](https://www.spyder-ide.org/) - available after installing Anaconda distribution.
 
 ---
 
@@ -18,9 +18,9 @@ r { color: red }
 
 ### Paths to directories / files
 In Windows, the addresses (paths) of files / folders can be entered in various ways:
- >- c: \ someFolder - with a single `\` character
- >- c: \\ someFolder - using the double `\ \`
- >- c: / someFolder - with a single character `/`
+ >- `c:\someFolder` - with a single `\` character
+ >- `c:\\someFolder` - using the double `\ \`
+ >- `c:/someFolder` - with a single character `/`
 
 Check which method works for your computer.
 
@@ -76,8 +76,8 @@ Directory and file names should:
 3. After installing Anaconda:
    >- run Anaconda terminal on Windows:
    >- run terminal on Linux
-   >- check conda version:  `conda –version `
-   >- update conda manager:  `conda update conda  `
+   >- check conda version:  `conda --version`
+   >- update conda manager:  `conda update conda`
    >- update of Anaconde:  `conda update anaconda`
 
 
@@ -87,7 +87,9 @@ In order to be able to operate virtual environments and collaborate with the *co
 
   >- run terminal
   >- in (base) environment run: `conda install nb_conda`
-  >-  (base) environment run: `conda install -c conda-forge jupyter_contrib_nbextensions`
+or or if you get any errors try to use conda-forge:
+  >- `conda install -c conda-forge nb_conda`
+  >- in (base) environment run: `conda install -c conda-forge jupyter_contrib_nbextensions`
 
 ---
 # III. Conda environments and packages management
@@ -99,12 +101,12 @@ For each project we advice to create separate environment with installed needed 
    >- `conda create  -n name_of_environment` - create an environment called name_of_environment
    >- `conda create -n name_of_environment python=3.6.6` - create an environment called name_of_environment, with the indicated Python version
   
-   >- `conda remove -n name_of_environment` –all environment remove
+   >- `conda remove -n name_of_environment --all` environment remove
    >- `activate name_of_environment*` - activating the environment on Windows
    >- `conda activate name_of_environment` - activating the environment on Linux
    >- `deactivate deactivating`- the environment on Windows
    >- `conda deactivate deactivating` - the environment on Linux
-   >- `conda info –envs / conda info -e` - displaying a list of available environments
+   >- `conda info --envs / conda info -e` - displaying a list of available environments
        
 
 ## 2. Packages management
