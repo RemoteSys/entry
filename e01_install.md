@@ -10,7 +10,7 @@ r { color: red }
 2. Install text editor (python syntax support function is helpful). Sample open source editors:
  - [notepad++](https://notepad-plus-plus.org/).
  - [atom](https://atom.io/).
- - [spyder](https://www.spyder-ide.org/) - available after installing Anaconda distribution.
+ - [spyder](https://www.spyder-ide.org/)
 
 ---
 
