@@ -56,12 +56,17 @@ def main(args):
     module is run as a script. All this code can (optionally) be grouped into
     a single function, commonly called 'main ()'.
     """
+    print(f"The 'main ()' function:\n{'---'*10}\n")
+    msg1 = "  The variable 'args' is of the type:"
+    msg2 = "  and it looks like this:"
+    print(f"{msg1:<46}{type(args)}\n{msg2:<46}{args}\n")
+
     if args.user_path:
         args.user_path = str(Path(args.user_path).resolve())
 
-    print(f"Dictionary of command line arguments:")
+    print(f"  Dictionary of command line arguments:")
     for key, val in vars(args).items():
-        print(f"{'key = ':>10}{key:<10}\tvalues = {val}")
+        print(f"  {'key = ':>10}{key:<10}\tvalues = {val}")
 
     print("\n")
 
@@ -76,7 +81,4 @@ if __name__ == "__main__":
     print(f"{'Module folder path (__file__):':<46}{module_dir}\n")
     print(f"{'Value of the variable __name__:':<46}{__name__}\n")
 
-    msg1 = "The variable 'args' is of the type:"
-    msg2 = "and it looks like this:"
-    print(f"{msg1:<46}{type(args)}\n{msg2:<46}{args}\n")
     main(args)
