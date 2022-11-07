@@ -20,8 +20,10 @@ import sys
 import argparse
 
 # temporary module search path can be set
+# suppose that the modules to be imported are in the subdirectory 'src'
 current_dir = str(Path(".").resolve().as_posix())
-module_dir = str(Path(__file__).resolve())
+module_dir = Path(__file__).parent.resolve()
+module_dir = str(module_dir.joinpath("src"))
 
 sys.path.append(current_dir)
 sys.path.insert(0, module_dir)
