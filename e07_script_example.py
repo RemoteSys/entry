@@ -2,15 +2,29 @@
 
 
 """
-First script
+First script.
+
+Dunder variable - Double Under (Underscores):
+    - __file__: contains the path to the module
+    - __name__: "__main__" or module name
+
+If the module is imported, the python interpreter sets the value of the 
+__name__ variable to the name of the module.
+
+If the module is run as a script, the __name__ variable becomes __main__.
+
 """
 
 from pathlib import Path
 import sys
 import argparse
 
-pathSearch = Path(".").resolve().as_posix()
-sys.path.append(pathSearch)
+# temporary module search path can be set
+current_dir = str(Path(".").resolve().as_posix())
+module_dir = str(Path(__file__).resolve())
+
+sys.path.append(current_dir)
+sys.path.insert(0, module_dir)
 
 
 # -----------------------------------------
@@ -30,7 +44,7 @@ def parserFunction():
     parser.add_argument("rows", type=int, help="""Number of rows""")
     parser.add_argument("cols", type=int, help="""Number of cols""")
     parser.add_argument(
-        "-p", "--somePath", type=str, help="""Path to folder"""
+        "-p", "--user_path", type=str, help="""Path to folder"""
     )
 
     args = parser.parse_args()
@@ -38,12 +52,16 @@ def parserFunction():
 
 
 def main(args):
-    if args.somePath:
-        args.fullPath = str(Path(args.somePath).resolve())
+    """The code below the condition 'if __main __...' is executed when the
+    module is run as a script. All this code can (optionally) be grouped into
+    a single function, commonly called 'main ()'.
+    """
+    if args.user_path:
+        args.user_path = str(Path(args.user_path).resolve())
 
     print(f"Dictionary of command line arguments:")
     for key, val in vars(args).items():
-        print(f"key = {key}\tvalues = {val}")
+        print(f"{'key = ':>10}{key:<10}\tvalues = {val}")
 
     print("\n")
 
@@ -53,8 +71,12 @@ def main(args):
 if __name__ == "__main__":
 
     args = parserFunction()
-    print(
-        f"""\nThe 'args' is of the type:\t{type(args)}\nand it looks like this:\n\t\t\t{args}\n"""
-    )
 
+    print(f"\n{'Current folder path (working directory):':<46}{current_dir}")
+    print(f"{'Module folder path (__file__):':<46}{module_dir}\n")
+    print(f"{'Value of the variable __name__:':<46}{__name__}\n")
+
+    msg1 = "The variable 'args' is of the type:"
+    msg2 = "and it looks like this:"
+    print(f"{msg1:<46}{type(args)}\n{msg2:<46}{args}\n")
     main(args)
