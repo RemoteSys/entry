@@ -21,7 +21,7 @@ import argparse
 
 # temporary module search path can be set
 # suppose that the modules to be imported are in the subdirectory 'src'
-current_dir = str(Path(".").resolve().as_posix())
+current_dir = str(Path(".").resolve())
 module_dir = Path(__file__).parent.resolve()
 module_dir = str(module_dir.joinpath("src"))
 
