@@ -43,18 +43,21 @@ After installing Anaconda:
   >- run terminal on Linux
   >- check conda version:  `conda --version`
   >- update conda manager:  `conda update conda`
-  >- update of Anaconde:  `conda update anaconda`
 
 
 ## Install extension
 
 In order to be able to operate virtual environments and collaborate with the *conda* manager from the *Jupyter Notebook* level, an additional package must be installed:
 
-1. `nb extensions`
+I. For notebook >= 7 and jupyterlab >= 4:
+1. `nb_conda_kernels`
+  >- run terminal: `Anaconda Powershell`
+  >- in (base) environment run: `conda install -c conda-forge nb_conda_kernels`
+
+II. For older versions:
+1. `nb_extensions`
   >- run terminal
-  >- in (base) environment run: `conda install nb_conda`
-or or if you get any errors try to use conda-forge:
-  >- `conda install -c conda-forge nb_conda`
+  >- in (base) environment run: `conda install -c conda-forge nb_conda`
 
 2. `jupyter extensions`
 
@@ -79,7 +82,5 @@ In terminal (base) environment run:
 3. Anaconda Didtribution:  see [here](https://www.anaconda.com/distribution/)
 
 4. User guide: see [guide](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html)
-
-
 
 ---
