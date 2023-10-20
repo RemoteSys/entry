@@ -52,7 +52,7 @@ You can run the code in the text console:
 - multi-line code
 - you can define functions and classes
 
-The `%edit` (inshort `%ed`) magic function allows you to quickly navigate to the text editor associated with `ipython`.
+The `%edit` (in short `%ed`) magic function allows you to quickly navigate to the text editor associated with `ipython`.
 
 ## Example:
 
@@ -61,13 +61,16 @@ The `%edit` (inshort `%ed`) magic function allows you to quickly navigate to the
 def f1():
     print('abc')
 ```
-- call the magic function: `%save file_name.py line_number` defining the function definition, e.g.: `%save test.py 5`
+- call the magic function: `%save file_name.py line_number` defining the function definition, e.g.:
+ -- `%save test.py 5` - if the function was defined on line 5
+
 - a `test.py` file will be created in the working directory
 - run function: `f1()`
 - modify function code:
-  -- execute: `%edit test.py`
-  -- modify function code
-  -- save the changes and close the file, which will take you back to the console
+ -- execute: `%edit test.py`
+ -- modify function code
+ -- save the changes and close the file, which will take you back to the console
+
 - call the updated `f1()` function
 - you can also immediately indicate the function to be edited by giving its name instead of the file name:
-  -- `%ed f1`
+ -- `%ed f1`
