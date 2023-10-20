@@ -39,11 +39,35 @@ All work done in ipython can be saved to a text file using one of the magic comm
 
  >- %logstart
  >- %history / %hist
- >- %save
 
 Example with `%hist`:
 
  > `%hist -n -o -f path_to_my_history_file.txt`
 
 
+# Working with ipython
 
+You can run the code in the text console:
+- single lines of code
+- multi-line code
+- you can define functions and classes
+
+The `%edit` (inshort `%ed`) magic function allows you to quickly navigate to the text editor associated with `ipython`.
+
+## Example:
+
+- define function:
+```python
+def f1():
+    print('abc')
+```
+- call the magic function: `%save file_name.py line_number` defining the function definition, e.g.: `%save test.py 5`
+- a `test.py` file will be created in the working directory
+- run function: `f1()`
+- modify function code:
+  -- execute: `%edit test.py`
+  -- modify function code
+  -- save the changes and close the file, which will take you back to the console
+- call the updated `f1()` function
+- you can also immediately indicate the function to be edited by giving its name instead of the file name:
+  -- `%ed f1`
