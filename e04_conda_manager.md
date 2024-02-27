@@ -1,11 +1,6 @@
-<style>
-r { color: red }
-</style>
-
-
 # Conda environments and packages management
 
-## Management of environments
+### Management of environments
 
 For each project we advice to create separate environment with installed needed packages. Basic commands [help]( https://conda.io/docs/user-guide/tasks/manage-environments.html):
 
@@ -20,7 +15,7 @@ For each project we advice to create separate environment with installed needed 
   >- `conda info --envs / conda info -e` - displaying a list of available environments
        
 
-## Packages management
+### Packages management
 
 Basic commands [help](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-pkgs.html):
 
@@ -29,8 +24,8 @@ Basic commands [help](https://docs.conda.io/projects/conda/en/latest/user-guide/
   >- `conda list | grep package_name` - search for packages installed in the current environment using the stream | and console command **grep** - on Linux  
   >- `conda install package_name` - installs package in current environment  
   >- `conda remove package_name` - remove package from current environment  
-
 ---
+
 
 # `yaml` file 
 
@@ -39,7 +34,8 @@ To create or update the environment, you can use a text file with a list of nece
   >- `conda env create -f myModules.yaml` - creates a new environment [see here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file)
   >- `conda env update -f myModules.yaml` - updates the environment
 
-## Example of `yaml` file
+
+### Example of `yaml` file
 
 ```yaml
 name: stats2

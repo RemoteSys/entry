@@ -1,28 +1,50 @@
-<style>
-r { color: red }
-</style>
+# Introduction
 
+Preparing your computer for the lab requires installing:
 
-# Preparing the computer for the laboratory
----
-
-1. Install Anaconda or Miniconda distribution - see section [Installing](#installing).
+1. Python interpreter, one of the methods:
+ - download the official [distribution](Python.org)
+ - using a package manager for a given system, e.g. apt (Debian), the Microsoft Store (Windows), etc.
+ - special distribution such as Miniconda/Anaconda
 2. Install text editor (python syntax support function is helpful). Sample open source editors:
- - [notepad++](https://notepad-plus-plus.org/).
- - [atom](https://atom.io/).
- - [spyder](https://www.spyder-ide.org/)
-
+ - notepad++ ([url](https://notepad-plus-plus.org/))
+ - atom ([url](https://atom.io/))
+ - spyder ([url](https://www.spyder-ide.org/))
+3. Optional (but recommended):
+ - git --fast-version-control ([url](https://git-scm.com/))
 ---
+
+
+# Install the official distribution
+
+### Folder location
+
+Folders with software, data, scripts etc. should be located directly on the comupter's disk - examples for the Windows system:
+  >- `c:\Program Files\python_no`
+  >- where no is Python version number, e.g. `3.12` --> `c:\Program Files\python312`
+
+
+### Distribution installation
+
+1. Download the latest source [release](https://www.python.org/downloads/) or look for a specific release.
+2. Run the installation and follow the appearing tips.
+3. For Windows user:
+  - select a custom location
+  - enter location e.g. `c:\Program Files\python312`
+  - do not check the box: `Add python.exe to PATH`
+---
+
 
 # Install Anaconda / Miniconda
 
-## Folder location
+### Folder location
 
 Folders with software, data, scripts etc. should be located directly on the comupter's disk - examples for the Windows system:
   >- `c:\Anaconda` - Anaconda installation folder
   >- `c:\Miniconda` - Miniconda installation folder
 
-## Distribution installation
+
+### Distribution installation
 
 1. Choose versions:
   >- Anaconda page: [package](https://www.anaconda.com/products/distribution)
@@ -37,7 +59,7 @@ Folders with software, data, scripts etc. should be located directly on the comu
   >- for macOS: [install](https://docs.anaconda.com/anaconda/install/mac-os/)    
    
 
-## Distribution update
+### Distribution update
 After installing Anaconda:
   >- run Anaconda terminal on Windows:
   >- run terminal on Linux
@@ -45,7 +67,7 @@ After installing Anaconda:
   >- update conda manager:  `conda update conda`
 
 
-## Install extension
+### Install extension
 
 In order to be able to operate virtual environments and collaborate with the *conda* manager from the *Jupyter Notebook* level, an additional package must be installed:
 

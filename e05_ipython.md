@@ -4,13 +4,13 @@
  >- ipython tutorial: [here](https://ipython.readthedocs.io/en/stable/interactive/index.html)
 
 
-## Start `ipython`:
+### Start `ipython`:
 
- > in the system terminal (Linux) or in the Anaconda Prompt (Windows) write `ipython`.
+ > in the system terminal or in the Anaconda Prompt (Windows) write `ipython`.
  ![Lunch ipython](./img/ipython.png)
 
 
-## Keyboard shortcuts:
+### Keyboard shortcuts:
 
  - `TAB` - completes and suggests syntax  
  - `name_object + ?` e.g. `myFunction?` display description (doc string) if available
@@ -23,7 +23,7 @@
  - `ctrl + u` - deletes the entire text line
 
 
-## Magic commands
+### Magic commands
 
 In the `ipython` console you can run the so-called magic commands. These commands are preceded by the `%` character, e.g .:
 
@@ -39,6 +39,7 @@ All work done in ipython can be saved to a text file using one of the magic comm
 
  >- %logstart
  >- %history / %hist
+ >- %save
 
 Example with `%hist`:
 
@@ -54,7 +55,8 @@ You can run the code in the text console:
 
 The `%edit` (in short `%ed`) magic function allows you to quickly navigate to the text editor associated with `ipython`.
 
-## Example:
+
+### Example:
 
 - define function:
 ```python

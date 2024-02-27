@@ -1,6 +1,5 @@
 # -*- coding: utf-8-*-
 
-
 """
 First script.
 
@@ -8,11 +7,10 @@ Dunder variable - Double Under (Underscores):
     - __file__: contains the path to the module
     - __name__: "__main__" or module name
 
-If the module is imported, the python interpreter sets the value of the 
+If the module is imported, the python interpreter sets the value of the
 __name__ variable to the name of the module.
 
 If the module is run as a script, the __name__ variable becomes __main__.
-
 """
 
 from pathlib import Path
@@ -29,7 +27,7 @@ sys.path.append(current_dir)
 sys.path.insert(0, module_dir)
 
 
-# -----------------------------------------
+# --
 
 description = """This is a description of what the script does.
 This script:
@@ -38,16 +36,14 @@ This script:
 """
 
 
-def parserFunction():
+def parser_function():
     """Function parsing command line arguments"""
     parser = argparse.ArgumentParser(description=description)
 
-    # Add arguments to your module: mandatory, i.e. positional and optional i.e.
-    parser.add_argument("rows", type=int, help="""Number of rows""")
-    parser.add_argument("cols", type=int, help="""Number of cols""")
-    parser.add_argument(
-        "-p", "--user_path", type=str, help="""Path to folder"""
-    )
+    # Add arguments to your script: mandatory (positional) and optional
+    parser.add_argument("rows", type=int, help="Number of rows")
+    parser.add_argument("cols", type=int, help="Number of cols")
+    parser.add_argument("-p", "--user_path", type=str, help="Path to folder")
 
     args = parser.parse_args()
     return args
@@ -66,18 +62,18 @@ def main(args):
     if args.user_path:
         args.user_path = str(Path(args.user_path).resolve())
 
-    print(f"  Dictionary of command line arguments:")
+    print("  Dictionary of command line arguments:")
     for key, val in vars(args).items():
         print(f"  {'key = ':>10}{key:<10}\tvalues = {val}")
 
     print("\n")
 
 
-# ------------------------------------------
+# --
 
 if __name__ == "__main__":
 
-    args = parserFunction()
+    args = parser_function()
 
     print(f"\n{'Current folder path (working directory):':<46}{current_dir}")
     print(f"{'Module folder path (__file__):':<46}{module_dir}\n")
