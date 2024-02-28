@@ -32,6 +32,14 @@ Folders with software, data, scripts etc. should be located directly on the comu
   - select a custom location
   - enter location e.g. `c:\Program Files\python312`
   - do not check the box: `Add python.exe to PATH`
+
+
+### Install `Jupyter`
+
+ - open terminal (PowerShell on Windows)
+ - `python3 -m pip install jupyter` - if your Python is added to the Windows PATH
+ - `C:/Program Files/python12/python.exe -m pip install jupyter` - if python is not added to Windows
+   Path, it is necessary to provide the full path to `python.exe`
 ---
 
 
